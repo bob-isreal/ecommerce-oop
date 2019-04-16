@@ -1,0 +1,25 @@
+{
+  "name": "ecommerce-oop",
+  "version": "1.0.0",
+  "description": "A Demo Project Demonstrating How Object Oriented Programming Works in the prototypal context, with a focus on JavaScript being a Prototype based language",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "jest": "^24.7.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samfeolu/ecommerce-oop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Samfeolu/ecommerce-oop/issues"
+  },
+  "homepage": "https://github.com/Samfeolu/ecommerce-oop#readme"
+}
