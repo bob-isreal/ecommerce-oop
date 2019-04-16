@@ -1,7 +1,7 @@
 const { User } = require("./app");
 const { Admin } = require("./app");
 const got = require("got");
-jest.mock("got");
+
 test('Should Create New User with corresponding name "Shalom" ', function() {
   let sampleUser = new User("Shalom", "shalom@gmail.com", 12345);
   expect(sampleUser.name).toBe("Shalom");
