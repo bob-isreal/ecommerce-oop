@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A Demo Project Demonstrating How Object Oriented Programming Works in the prototypal context, with a focus on JavaScript being a Prototype based language",
   "main": "app.js",
-  "dependencies": {},
+  "dependencies": {
+    "got": "^9.6.0"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.11",
     "jest": "^24.7.1"
