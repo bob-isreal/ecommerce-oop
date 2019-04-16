@@ -1,25 +1,25 @@
 const { User } = require("./app");
 const { Admin } = require("./app");
-const got = require("got");
+const db = require("./database");
 
 test('Should Create New User with corresponding name "Shalom" ', function() {
-  let sampleUser = new User("Shalom", "shalom@gmail.com", 12345);
-  expect(sampleUser.name).toBe("Shalom");
+  let Shalom = new User("Shalom", "shalom@gmail.com", 12345);
+  expect(Shalom.name).toBe("Shalom");
 });
 
 test('Should Create New User with corresponding email "shalom@gmail.com" ', function() {
-  let sampleUser = new User("Shalom", "shalom@gmail.com", 12345);
-  expect(sampleUser.email).toBe("shalom@gmail.com");
+  let Dickson = new User("Dickson", "dickson@gmail.com", 12345);
+  expect(Dickson.email).toBe("dickson@gmail.com");
 });
 
 test('Should Create New User with corresponding password "12345" ', function() {
-  let sampleUser = new User("Shalom", "shalom@gmail.com", 12345);
-  expect(sampleUser.password).toBe(12345);
+  let Uchenna = new User("Uchenna", "shalom@gmail.com", 12345);
+  expect(Uchenna.password).toBe(12345);
 });
 
 test('Should Create New Admin with corresponding name "Adedayo" ', function() {
-  let sampleAdmin = new Admin("Adedayo", "samfeolu@gmail.com", 1234);
-  expect(sampleAdmin.name).toBe("Adedayo");
+  let Adedayo = new Admin("Adedayo", "samfeolu@gmail.com", 1234);
+  expect(Adedayo.name).toBe("Adedayo");
 });
 
 test('Should Create New User with corresponding email "samfeolu@gmail.com" ', function() {
@@ -28,12 +28,6 @@ test('Should Create New User with corresponding email "samfeolu@gmail.com" ', fu
 });
 
 test('Should Create New User with corresponding password "12345" ', function() {
-  let sampleAdmin = new Admin("Adedayo", "samfeolu@gmail.com", 1234);
-  expect(sampleAdmin.password).toBe(1234);
-});
-test("Testing My Get", () => {
-  expect(got.get()).toBe("Getted");
-});
-test("Testing My Post", () => {
-  expect(got.post()).toBe("Posted");
+  let sampleAdmin1 = new Admin("Adedayo", "samfeolu@gmail.com", 1234);
+  expect(sampleAdmin1.password).toBe(1234);
 });
