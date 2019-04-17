@@ -96,3 +96,15 @@ test("Check For The Type Of User In The sampleAdmin1 Object should return 'Admin
   console.log(db);
   expect(sampleAdmin1.type).toBe("Admin");
 });
+
+test("Read User By Id From a User Should Return Dickson Object", function() {
+  expect(Dickson.readSingleUser(2)).toEqual("Dickson");
+});
+
+test("Read User By Id From a User Should Return Dickson Object", function() {
+  expect(Uchenna.readSingleUser(1)).toEqual("Shalom");
+});
+
+test("Read User By Id From An Admin Should Return Dickson Object", function() {
+  expect(Adedayo.readSingleUser(1)).toEqual("Shalom");
+});

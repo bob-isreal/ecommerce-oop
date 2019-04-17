@@ -28,7 +28,9 @@ function User(name, email, password) {
 
   console.log(this);
 }
-
+User.prototype.readSingleUser = function(id) {
+  return db.users[id.toString()];
+};
 function Admin(name, email, password) {
   //May The Code Be With You In Jesus Name
 
