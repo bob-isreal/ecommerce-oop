@@ -22,8 +22,8 @@ test('Should Create New Admin with corresponding name "Adedayo" ', function() {
   expect(Adedayo.name).toBe("Adedayo");
 });
 
-test('Should Create New User with corresponding email "samfeolu@gmail.com" ', function() {
-  var sampleAdmin = new Admin("Adedayo", "samfeolu@gmail.com", 1234);
+test('Should Create New Admin with corresponding email "samfeolu@gmail.com" ', function() {
+  var sampleAdmin = new Admin("Adedunye", "samfeolu@gmail.com", 1234);
   expect(sampleAdmin.email).toBe("samfeolu@gmail.com");
 });
 
@@ -46,4 +46,22 @@ test("Should Add First User Into The DataBase WIth email 'shalom@gmail.com'", fu
 
 test("Should Add Second User Into The DataBase With email 'dickson@gmail.com'", function() {
   expect(db.users["2"].email).toBe("dickson@gmail.com");
+});
+
+test("Should Add First Admin Into The DataBase WIth Name Adedayo", function() {
+  expect(db.admin["1"].name).toBe("Adedayo");
+});
+
+test("Should Add Second Admin Into The DataBase With Name Adedunye", function() {
+  expect(db.admin["2"].name).toBe("Adedunye");
+});
+
+test("Should Add First Admin Into The DataBase WIth email 'samfeolu@gmail.com'", function() {
+  expect(db.admin["1"].email).toBe("samfeolu@gmail.com");
+});
+
+test("Should Add Second User Into The DataBase With email 'samfeolu@gmail.com'", function() {
+  console.log(db);
+
+  expect(db.admin["2"].email).toBe("samfeolu@gmail.com");
 });
