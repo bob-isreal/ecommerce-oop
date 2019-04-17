@@ -5,6 +5,8 @@ var Shalom = new User("Shalom", "shalom@gmail.com", 12345);
 var Dickson = new User("Dickson", "dickson@gmail.com", 12345);
 var Uchenna = new User("Uchenna", "shalom@gmail.com", 12345);
 var Adedayo = new Admin("Adedayo", "samfeolu@gmail.com", 1234);
+var sampleAdmin = new Admin("Adedunye", "samfeolu@gmail.com", 1234);
+var sampleAdmin1 = new Admin("Adedayo", "samfeolu@gmail.com", 1234);
 
 test('Should Create New User with corresponding name "Shalom" ', function() {
   expect(Shalom.name).toBe("Shalom");
@@ -23,12 +25,10 @@ test('Should Create New Admin with corresponding name "Adedayo" ', function() {
 });
 
 test('Should Create New Admin with corresponding email "samfeolu@gmail.com" ', function() {
-  var sampleAdmin = new Admin("Adedunye", "samfeolu@gmail.com", 1234);
   expect(sampleAdmin.email).toBe("samfeolu@gmail.com");
 });
 
 test('Should Create New User with corresponding password "12345" ', function() {
-  var sampleAdmin1 = new Admin("Adedayo", "samfeolu@gmail.com", 1234);
   expect(sampleAdmin1.password).toBe(1234);
 });
 
@@ -77,7 +77,7 @@ test("Check For The Type Of User In The Database should return 'User' ", functio
 });
 
 test("Check For The Type Of User In The Database should return 'User' ", function() {
-  expect(db.users["6"].type).toBe("User");
+  expect(db.users["3"].type).toBe("User");
 });
 
 test("Check For The Type Of User In The Shalom Object should return 'User' ", function() {
