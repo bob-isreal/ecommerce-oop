@@ -49,19 +49,19 @@ test("Should Add Second User Into The DataBase With email 'dickson@gmail.com'", 
 });
 
 test("Should Add First Admin Into The DataBase WIth Name Adedayo", function() {
-  expect(db.admin["1"].name).toBe("Adedayo");
+  expect(db.users["4"].name).toBe("Adedayo");
 });
 
 test("Should Add Second Admin Into The DataBase With Name Adedunye", function() {
-  expect(db.admin["2"].name).toBe("Adedunye");
+  expect(db.users["5"].name).toBe("Adedunye");
 });
 
 test("Should Add First Admin Into The DataBase WIth email 'samfeolu@gmail.com'", function() {
-  expect(db.admin["1"].email).toBe("samfeolu@gmail.com");
+  expect(db.users["4"].email).toBe("samfeolu@gmail.com");
 });
 
 test("Should Add Second User Into The DataBase With email 'samfeolu@gmail.com'", function() {
   console.log(db);
 
-  expect(db.admin["2"].email).toBe("samfeolu@gmail.com");
+  expect(db.users["5"].email).toBe("samfeolu@gmail.com");
 });

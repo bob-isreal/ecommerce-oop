@@ -7,32 +7,25 @@ function User(name, email, password) {
   this.email = email;
   this.password = password;
 
-  if (this.constructor == User) {
-    for (var i = 1; i >= 0; ) {
-      if (!db.users[i + ""]) {
-        db.users[i + ""] = {
-          name: this.name,
-          email: this.email,
-          password: this.password
-        };
-        break;
+  for (var i = 1; i >= 0; ) {
+    if (!db.users[i + ""]) {
+      db.users[i + ""] = {
+        name: this.name,
+        email: this.email,
+        password: this.password
+      };
+      if (this.constructor == User) {
+        this.type = "User";
+      } else if (this.constructor == Admin) {
+        this.type = "Admin";
       }
-      i++;
+      this.id = i + "";
+      break;
     }
+    i++;
   }
-  if (this.constructor == Admin) {
-    for (var i = 1; i >= 0; ) {
-      if (!db.admin[i + ""]) {
-        db.admin[i + ""] = {
-          name: this.name,
-          email: this.email,
-          password: this.password
-        };
-        break;
-      }
-      i++;
-    }
-  }
+
+  console.log(this);
 }
 
 function Admin(name, email, password) {
