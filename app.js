@@ -23,7 +23,7 @@ function User(name, email, password) {
   if (this.constructor == Admin) {
     for (var i = 1; i >= 0; ) {
       if (!db.admin[i + ""]) {
-        db.users[i + ""] = {
+        db.admin[i + ""] = {
           name: this.name,
           email: this.email,
           password: this.password
