@@ -37,7 +37,9 @@ function Admin(name, email, password) {
 
   User.call(this, name, email, password);
 }
-
+Admin.prototype = Object.create(User.prototype, {
+  constructor: { value: Admin }
+});
 module.exports = {
   User,
   Admin
