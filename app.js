@@ -13,14 +13,15 @@ function User(name, email, password) {
   }
   for (var i = 1; i >= 0; ) {
     if (!db.users[i + ""]) {
+      this.id = i + "";
       db.users[i + ""] = {
         name: this.name,
         email: this.email,
         password: this.password,
-        type: this.type
+        type: this.type,
+        id: this.id
       };
 
-      this.id = i + "";
       break;
     }
     i++;
