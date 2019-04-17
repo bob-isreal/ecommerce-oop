@@ -6,6 +6,19 @@ function User(name, email, password) {
   this.name = name;
   this.email = email;
   this.password = password;
+  if (this.constructor == User) {
+    for (var i = 1; i >= 0; ) {
+      if (!db.users[i + ""]) {
+        db.users[i + ""] = {
+          name: this.name,
+          email: this.email,
+          password: this.password
+        };
+        break;
+      }
+      i++;
+    }
+  }
 }
 
 function Admin(name, email, password) {

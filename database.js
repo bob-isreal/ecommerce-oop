@@ -1,4 +1,5 @@
-let users = {};
-let order = {};
+var users = {};
+var order = {};
+var admin = {};
 
-module.exports = { users, order };
+module.exports = { users, order, admin };
