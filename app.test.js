@@ -159,3 +159,8 @@ test("Delete A User", function() {
     Adedayo.deleteAUser(1);
     expect(Adedayo.readSingleUser(1)).not.toBeDefined();
 });
+
+test("Delete All User", function() {
+    Adedayo.deleteAllUser();
+    expect(Adedayo.readAllUser()).not.toBeDefined();
+});
