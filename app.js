@@ -93,7 +93,9 @@ Admin.prototype.readAllUser = function() {
 Admin.prototype.readAllOrder = function() {
     return db.order;
 };
-
+Admin.prototype.readSingleOrder = function(id) {
+    return db.order[id.toString()];
+};
 Admin.prototype.deleteAUser = function(id) {
     delete db.users[id.toString()];
 };

@@ -174,3 +174,13 @@ test("Create an Order", function() {
 test("Read All Orders by Admin", function() {
     expect(Adedayo.readAllOrder()).toEqual(db.order);
 });
+
+test("Read Single Orders by Admin", function() {
+    expect(Adedayo.readSingleOrder(1).id).toBe("1");
+});
+
+test("Update Single Product should update user details", function() {
+    expect(
+        Adedayo.updateSingleUser(4, "Bobby", "bobade@gmail.com", 1234)
+    ).toBeTruthy();
+});
