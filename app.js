@@ -111,7 +111,9 @@ Admin.prototype.deleteAnOrder = function(id) {
 Admin.prototype.deleteAUser = function(id) {
     delete db.users[id.toString()];
 };
-
+Admin.prototype.deleteAllOrder = function() {
+    db.order = {};
+};
 Admin.prototype.deleteAllUser = function() {
     db.users = {};
 };

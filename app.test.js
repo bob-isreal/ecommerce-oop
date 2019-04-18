@@ -167,6 +167,7 @@ test("Delete All User", function() {
 
 test("Create an Order", function() {
     Dickson.createOrder([]);
+    Uchenna.createOrder(["Bread", "Beans", "Ram"]);
     console.log(db);
     expect(db.order["1"]).toBeDefined();
 });
@@ -194,4 +195,9 @@ test("Update Single Product should update user details", function() {
 test("Delete An Order", function() {
     Adedayo.deleteAnOrder(1);
     expect(Adedayo.readSingleOrder(1)).not.toBeDefined();
+});
+
+test("Delete All Order", function() {
+    Adedayo.deleteAllUser();
+    expect(Adedayo.readAllUser()).toEqual({});
 });
