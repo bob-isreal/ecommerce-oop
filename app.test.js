@@ -138,3 +138,7 @@ test("Update Single User should have Completed parameters", function() {
     Adedayo.updateSingleUser("Bobby", "bobade@gmail.com", 1234)
   ).toBeFalsy();
 });
+
+test("Search User by Name", function() {
+  expect(Adedayo.searchByName("Adedayo")).toContain(sampleAdmin1);
+});
