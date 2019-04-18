@@ -63,6 +63,9 @@ Admin.prototype = Object.create(User.prototype, {
     constructor: { value: Admin }
 });
 
+Admin.prototype.readAllUser = function() {
+    return db.users;
+};
 module.exports = {
     User,
     Admin
