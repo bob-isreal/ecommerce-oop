@@ -55,6 +55,29 @@ User.prototype.searchByName = function(name) {
     return false;
 };
 
+User.prototype.createOrder = function(products) {
+    var bob = new Date();
+    for (var i = 1; i >= 0; ) {
+        if (!db.order[i + ""]) {
+            var id = i + "";
+            db.order[id] = {
+                products: products,
+                timeOfOrder: bob.getUTCHours() + ":" + bob.getMinutes(),
+                dateOfOrder:
+                    bob.getFullYear() +
+                    " " +
+                    (bob.getMonth() + 1) +
+                    " " +
+                    bob.getDate(),
+                id: id,
+                userId: this.id
+            };
+
+            break;
+        }
+        i++;
+    }
+};
 //Admin Functions
 function Admin(name, email, password) {
     User.call(this, name, email, password);
@@ -66,6 +89,11 @@ Admin.prototype = Object.create(User.prototype, {
 Admin.prototype.readAllUser = function() {
     return db.users;
 };
+
+Admin.prototype.readAllOrder = function() {
+    return db.order;
+};
+
 Admin.prototype.deleteAUser = function(id) {
     delete db.users[id.toString()];
 };

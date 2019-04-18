@@ -164,3 +164,13 @@ test("Delete All User", function() {
     Adedayo.deleteAllUser();
     expect(Adedayo.readAllUser()).toEqual({});
 });
+
+test("Create an Order", function() {
+    Dickson.createOrder([]);
+    console.log(db);
+    expect(db.order["1"]).toBeDefined();
+});
+
+test("Read All Orders by Admin", function() {
+    expect(Adedayo.readAllOrder()).toEqual(db.order);
+});
