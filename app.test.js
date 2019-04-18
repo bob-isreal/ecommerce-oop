@@ -146,3 +146,11 @@ test("Search User by Name", function() {
 test("Search User by Name", function() {
     expect(Adedayo.searchByName("uchenna")).toBe(false);
 });
+
+test("Read All Users by Admin", function() {
+    expect(Adedayo.readAllUser()).toEqual(db.users);
+});
+
+test("Read All Users by User to be false", function() {
+    expect(Shalom.readAllUser()).toBeFalsy();
+});
