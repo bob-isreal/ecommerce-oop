@@ -69,6 +69,10 @@ Admin.prototype.readAllUser = function() {
 Admin.prototype.deleteAUser = function(id) {
     delete db.users[id.toString()];
 };
+
+Admin.prototype.deleteAllUser = function() {
+    db.users = {};
+};
 module.exports = {
     User,
     Admin

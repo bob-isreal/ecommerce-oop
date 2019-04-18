@@ -162,5 +162,5 @@ test("Delete A User", function() {
 
 test("Delete All User", function() {
     Adedayo.deleteAllUser();
-    expect(Adedayo.readAllUser()).not.toBeDefined();
+    expect(Adedayo.readAllUser()).toEqual({});
 });
