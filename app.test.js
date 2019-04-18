@@ -140,5 +140,5 @@ test("Update Single User should have Completed parameters", function() {
 });
 
 test("Search User by Name", function() {
-  expect(Adedayo.searchByName("Adedayo")).toContain(sampleAdmin1);
+  expect(Adedayo.searchByName("Adedayo")).toEqual(sampleAdmin1);
 });

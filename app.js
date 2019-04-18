@@ -46,7 +46,13 @@ User.prototype.updateSingleUser = function(id, name, email, password) {
 
   return true;
 };
-User.prototype.searchByName = function(name) {};
+User.prototype.searchByName = function(name) {
+  for (var user in db.users) {
+    if (db.users[user].name == name) {
+      return db.users[user];
+    }
+  }
+};
 function Admin(name, email, password) {
   //May The Code Be With You In Jesus Name
 
