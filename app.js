@@ -66,7 +66,9 @@ Admin.prototype = Object.create(User.prototype, {
 Admin.prototype.readAllUser = function() {
     return db.users;
 };
-Admin.prototype.deleteAUser = function(id) {};
+Admin.prototype.deleteAUser = function(id) {
+    delete db.users[id.toString()];
+};
 module.exports = {
     User,
     Admin
