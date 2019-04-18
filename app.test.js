@@ -108,3 +108,27 @@ test("Read User By Id From a User Should Return Dickson Object", function() {
 test("Read User By Id From An Admin Should Return Dickson Object", function() {
   expect(Adedayo.readSingleUser(1)).toEqual(Shalom);
 });
+
+test("Update Single User should only work for self", function() {
+  expect(
+    Adedayo.updateSingleUser(1, "Bobby", "bobade@gmail.com", 1234)
+  ).toBeFalsy();
+});
+
+test("Update Single User should not work for others and should not affect database", function() {
+  expect(db.users["1"].email).toBe("shalom@gmail.com");
+});
+
+test("Update Single User should update user details", function() {
+  expect(
+    Adedayo.updateSingleUser(4, "Bobby", "bobade@gmail.com", 1234)
+  ).toBeTruthy();
+});
+
+test("Update Single User should work for self and should affect database", function() {
+  expect(db.users["4"].email).toBe("bobade@gmail.com");
+});
+
+test("Update Single User should work for self and should affect database", function() {
+  expect(db.users["4"].name).toBe("Bobby");
+});

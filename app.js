@@ -1,3 +1,4 @@
+"use strict";
 const db = require("./database");
 
 function User(name, email, password) {
@@ -31,6 +32,14 @@ function User(name, email, password) {
 }
 User.prototype.readSingleUser = function(id) {
   return db.users[id.toString()];
+};
+User.prototype.updateSingleUser = function(id, name, email, password) {
+  if (!id || !name || !email || !password) {
+    throw new Error("Please Input all Parameters");
+  }
+  db.users[id.toString()].name = name;
+  db.users[id.toString()].email = email;
+  db.users[id.toString()].password = password;
 };
 function Admin(name, email, password) {
   //May The Code Be With You In Jesus Name
