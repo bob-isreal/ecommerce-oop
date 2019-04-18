@@ -132,3 +132,9 @@ test("Update Single User should work for self and should affect database", funct
 test("Update Single User should work for self and should affect database", function() {
   expect(db.users["4"].name).toBe("Bobby");
 });
+
+test("Update Single User should have Completed parameters", function() {
+  expect(
+    Adedayo.updateSingleUser("Bobby", "bobade@gmail.com", 1234)
+  ).toBeFalsy();
+});

@@ -35,11 +35,16 @@ User.prototype.readSingleUser = function(id) {
 };
 User.prototype.updateSingleUser = function(id, name, email, password) {
   if (!id || !name || !email || !password) {
-    throw new Error("Please Input all Parameters");
+    return false;
+  }
+  if (id.toString() !== this.id) {
+    return false;
   }
   db.users[id.toString()].name = name;
   db.users[id.toString()].email = email;
   db.users[id.toString()].password = password;
+
+  return true;
 };
 function Admin(name, email, password) {
   //May The Code Be With You In Jesus Name
