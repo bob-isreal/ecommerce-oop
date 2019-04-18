@@ -151,6 +151,11 @@ test("Read All Users by Admin", function() {
     expect(Adedayo.readAllUser()).toEqual(db.users);
 });
 
-test("Read All Users by User to be false", function() {
-    expect(Shalom.readAllUser()).toBeFalsy();
+test("Read All Users by User to throw error", function() {
+    expect(Shalom.readAllUser()).toThrow();
+});
+
+test("Delete A User", function() {
+    Adedayo.deleteAUser(1);
+    expect(Adedayo.readSingleUser(1)).not.toBeDefined();
 });
