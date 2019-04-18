@@ -105,6 +105,9 @@ User.prototype.updateSingleOrder = function(id, product) {
 
     return true;
 };
+Admin.prototype.deleteAnOrder = function(id) {
+    delete db.order[id.toString()];
+};
 Admin.prototype.deleteAUser = function(id) {
     delete db.users[id.toString()];
 };

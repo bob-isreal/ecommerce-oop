@@ -190,3 +190,8 @@ test("Update Single Product should update user details", function() {
     ).toBeTruthy();
     console.log(db);
 });
+
+test("Delete An Order", function() {
+    Adedayo.deleteAnOrder(1);
+    expect(Adedayo.readSingleOrder(1)).not.toBeDefined();
+});
