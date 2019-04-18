@@ -181,6 +181,12 @@ test("Read Single Orders by Admin", function() {
 
 test("Update Single Product should update user details", function() {
     expect(
-        Adedayo.updateSingleUser(4, "Bobby", "bobade@gmail.com", 1234)
+        Adedayo.updateSingleOrder("1", [
+            "cream",
+            "soap",
+            "toothbrush",
+            "hair-brush"
+        ])
     ).toBeTruthy();
+    console.log(db);
 });

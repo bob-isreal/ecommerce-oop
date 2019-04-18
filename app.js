@@ -96,6 +96,15 @@ Admin.prototype.readAllOrder = function() {
 Admin.prototype.readSingleOrder = function(id) {
     return db.order[id.toString()];
 };
+User.prototype.updateSingleOrder = function(id, product) {
+    if (!id || !product) {
+        return false;
+    }
+
+    db.order[id.toString()].products = product;
+
+    return true;
+};
 Admin.prototype.deleteAUser = function(id) {
     delete db.users[id.toString()];
 };
