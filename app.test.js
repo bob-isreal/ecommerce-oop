@@ -28,7 +28,7 @@ test('Should Create New Admin with corresponding email "samfeolu@gmail.com" ', f
     expect(sampleAdmin.email).toBe("samfeolu@gmail.com");
 });
 
-test('Should Create New User with corresponding password "12345" ', function() {
+test('Should Create New Admin with corresponding password "12345" ', function() {
     expect(sampleAdmin1.password).toBe(1234);
 });
 
@@ -60,7 +60,7 @@ test("Should Add First Admin Into The DataBase WIth email 'samfeolu@gmail.com'",
     expect(db.users["4"].email).toBe("samfeolu@gmail.com");
 });
 
-test("Should Add Second User Into The DataBase With email 'samfeolu@gmail.com'", function() {
+test("Should Add Second Admin Into The DataBase With email 'samfeolu@gmail.com'", function() {
     expect(db.users["5"].email).toBe("samfeolu@gmail.com");
 });
 
