@@ -27,6 +27,7 @@ function User(name, email, password) {
     }
 
     console.log(this);
+    console.log("Account Successfully Created");
 }
 User.prototype.readSingleUser = function(id) {
     console.log(db.users[id.toString()]);
